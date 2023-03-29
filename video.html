@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video</title>
+  <style>
+
+    .video {
+      position: relative;
+      margin-top: 14%;
+      margin-left: 25%;
+      width: 30px;
+      align-items: center;
+    }
+
+    body {
+      background-color: #E4D0D0;
+    }
+
+    .column {
+      margin: 20px 15px;
+      float: left;
+      width: 21%;
+      padding: 5px;
+    }
+
+    img{
+      border-radius: 50%;
+    }
+
+    .row2{
+      position: absolute;
+      top: 100%;
+      left: 10%;
+    }
+
+    .row1{
+      position: absolute;
+      left: 10%;
+    }
+
+    .row1:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row2:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .image{
+      opacity: 1;
+      display: block;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    .middle{
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      margin-left: 90px;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .column:hover .image{
+      opacity: 0.3;
+    }
+
+    .column:hover .middle{
+      opacity: 1;
+    }
+
+    .text{
+      color: black;
+      font-size: 25px;
+      padding: 16px 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <center><h2><u>
+    EXERCISES FOR GOOD HEALTH
+  </u></h2></center>
+  
+  <div class="row1">
+    <div class="column">
+      <img src="images/arm.jpeg" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Arms Exercise</div>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/LEG.webp" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Leg Exercise</div>
+      </div>
+    </div>
+    <div class="column">
+      <img src="images/belly.jpeg" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text"> Core Exercise</div>
+      </div>
+      
+    </div>
+    <div class="column">
+      <img src="images/Chest.webp" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Chest Exercise</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video">
+    <video controls autoplay muted loop src="3dman.mp4" width="700"></video>
+  </div>
+
+
+  <div class="row2">
+    <div class="column">
+      <img src="images/back.jpeg" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Back Exercise</div>
+      </div>
+    </div>
+    <div class="column">
+      <img src="images/Jogging.jpeg" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Jogging</div>
+      </div>
+    </div>
+    <div class="column">
+      <img src="men.jpg" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Exercise</div>
+      </div>
+    </div>
+    <div class="column">
+      <img src="men.jpg" alt="men" style="width:70%" class="image">
+      <div class="middle">
+        <div class="text">Exercise</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

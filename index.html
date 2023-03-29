@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health WebApp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+  <link rel="icon" href="images/fav.png">
+
+
+</head>
+
+<body>
+  <nav class="navbar">
+
+
+
+    <div class="image">
+      <a href="index.html#"><img src="images/icon2.png" alt="icon" class="icon"></a>
+    </div>
+
+    <span>MATRITVA</span>
+
+
+    <ul class="nav-links">
+
+      <input type="checkbox" id="checkbox_toggle" />
+
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <div class="menu">
+
+        <li><a href="index.html#">Home</a></li>
+        <li class="services">
+          <a>About</a>
+          <ul class="dropdown">
+            <li><a href="physical.html">Physical Activities</a></li>
+            <li><a href="adobe.html">Health Exercises</a></li>
+          </ul>
+        </li>
+
+        <!-- <li><a>About</a></li> -->
+          
+        <li class="services">
+
+          <a>Services</a>
+
+          <ul class="dropdown">
+
+            <li><a href="mental.html">Mental Health Predicter</a></li>
+            <li><a href="respiratory.html">Respiratory Diseases Predicter</a></li>
+            <li><a href="cardiovascular.html">Cardiovascular Malfunctioning Predicter</a></li>
+            <li><a href="climate.html">Climate Change Predicter</a></li>
+            <li><a href="cancer.html">Cancer symptoms Predicter</a></li>
+            <li><a href="covid.html">Covid-19 Predicter</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="center">
+            <button id="show-login">Login</button>
+          </div>
+        </li>
+
+      </div>
+
+    </ul>
+
+  </nav>
+
+  <div class="popup">
+    <div class="close-btn">&times;</div>
+    <div class="form">
+      <h2>Log in</h2>
+      <div class="form-element">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email">
+      </div>
+      <div class="form-element">
+        <label for="password">Password</label>
+        <input type="text" id="password" placeholder="Enter password">
+      </div>
+      <div class="form-element">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember me</label>
+      </div>
+      <div class="form-element">
+        <a href="index.html"><button>sign in</button></a>
+      </div>
+      <div class="from-element">
+        <a href="#">Forgot password?</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="box2">
+    <p>Over the last 15 years, the number of childhood deaths has been cut in half. This proves that it
+      is possible to win the fight against almost every disease. Still, we are spending an astonishing
+      amount of money and resources on treating illnesses that are surprisingly easy to prevent. Here our
+      website can help many of us.</p>
+  </div>
+
+
+  <div class="header">
+    <img src="images/family.jpg" alt="header" class="image1">
+    <div class="topnav">
+      <div autocomplete="none" class="search-container">
+        <form target="_blank" action="https://www.google.com/search" method="get" class="search-bar">
+          <input type="text" placeholder="Search.." name="q">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <h1>
+      <p class="header" style="font-family: 'Times New Roman', Times, serif">
+        GOOD HEALTH
+        <br>
+        AND
+        <br>
+        WELL-BEING
+      </p>
+    </h1>
+  </div>
+
+
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="images/slide1.jpg" class="d-block w-95" alt="...">
+        <div class="text">
+          <h4>Healthy You, Means</h4>
+          <h4> Healthy World</h4>
+        </div>
+        <a target="_blank" href="https://www.who.int/data/gho/data/major-themes/health-and-well-being"><button
+            type="button">Know More...</button></a>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="images/slide2.jpg" class="d-block w-95" alt="...">
+        <div class="text1">
+          <h4>Happy Mind,</h4>
+          <h4>Happy Life</h4>
+        </div>
+        <a target="_blank" href="https://www.mohfw.gov.in/"><button type="button">Know More...</button></a>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="images/slide3.jpg" class="d-block w-95" alt="...">
+        <div class="text2">
+          <h4>Eat Good,</h4>
+          <h4>Feel Good</h4>
+        </div>
+        <a target="_blank" href="https://www.thriveatwork.org.au/implement/plan/develop-a-well-being-strategy/"><button
+            type="button">Know More...</button></a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <div class="concern" id="major">
+    MAJOR HEALTH CONCERNS
+  </div>
+
+
+  <div class="card-container">
+    <div class="card">
+      <div class="imgbox">
+        <img src="images/mental.jpg" alt="mental" class="img2"></a>
+      </div>
+      <div class="content">
+        <h3><a href="mental.html">Mental Health</a></h3>
+        <p>Mental health includes our emotional, psychological, and social well-being.
+          It affects how we think, feel, and act. It also helps determine how we handle
+          stress, relate to others, and make healthy choices.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img src="images/climate.jpg" alt="mental" class="img2"></a>
+      </div>
+      <div class="content">
+        <h3><a href="climate.html">Climate Change</a></h3>
+        <p>Climate change increases the risk of illness through increasing temperature,
+          more frequent heavy rains and runoff, and the effects of storms.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img src="images/cardio.jpg" alt="mental" class="img2"></a>
+      </div>
+      <div class="content">
+        <h3><a href="cardiovascular.html">Cardiovascular Malfunctioning</a></h3>
+        <p>Cardiovascular diseases (CVDs) affect your heart and blood vessels.
+          It is the leading cause of death worldwide.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img src="images/respiratory.jpg" alt="mental" class="img2"></a>
+      </div>
+      <div class="content">
+        <h3><a href="respiratory.html">Respiratory Diseases</a></h3>
+        <p>Respiratory disease are any of the diseases and disorders of the airways and
+          the lungs that affect human respiration.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img src="images/cancer.jpeg" alt="mental" class="img2"></a>
+      </div>
+      <div class="content">
+        <h3><a href="cancer.html">Cancer</a></h3>
+        <p>Cancer is a disease caused when cells divide uncontrollably and spread into
+          surrounding tissues. Cancer is caused by changes to DNA.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img src="images/covid.webp" alt="mental" class="img2"></a>
+      </div>
+      <div class="content">
+        <h3><a href="covid.html">Covid-19</a></h3>
+        <p>Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2
+          virus.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="health" id="healthEx">
+    HEALTH EXERCISES
+  </div>
+
+  <div class="box">
+    <span style="--i:1;"><a target="_blank" href="physical.html#pre"><img src="images/1.png" class="rotimg"></a></span>
+    <span style="--i:2;"><a target="_blank" href="physical.html#adol"><img src="images/2.png" class="rotimg"></a></span>
+    <span style="--i:3;"><a target="_blank" href="physical.html#adult"><img src="images/3.png"
+          class="rotimg"></a></span>
+    <span style="--i:4;"><a target="_blank" href="physical.html#old"><img src="images/4.png" class="rotimg"></a></span>
+    <span style="--i:5;"><a target="_blank" href="physical.html#chro"><img src="images/5.png" class="rotimg"></a></span>
+    <span style="--i:6;"><a target="_blank" href="physical.html#preg"><img src="images/6.png" class="rotimg"></a></span>
+  </div>
+
+  <script src="JS/script.js"></script>
+
+  <div class="title">
+    To Do
+  </div>
+  <div class="todo-list">
+    <div class="list-head">
+      <input type="text" placeholder="eg. Exercises" class="entered-list">
+      <button class="add-list"> Add </button>
+    </div>
+
+    <div class="tasks">
+      <!-- <div class="item">
+            <p>new item here</p>
+            <div class="item-btn">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div> -->
+    </div>
+  </div>
+
+
+  <center>
+    <div class="vid">
+      <video controls autoplay muted loop src="health.mp4" width="700"></video>
+    </div>
+  </center>
+
+
+  <br>
+  <br>
+  <center>
+    <h2 id="Exercise"><u>
+        EXERCISES FOR GOOD HEALTH
+      </u></h2>
+  </center>
+
+  <div class="cont">
+    <div class="column">
+      <img src="images/arm.jpeg" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#arm">
+          <div class="text">Arms Exercise</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="images/LEG.webp" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#leg">
+          <div class="text">Leg Exercise</div>
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <img src="images/belly.jpeg" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#core">
+          <div class="text"> Core Exercise</div>
+        </a>
+      </div>
+
+    </div>
+    <div class="column">
+      <img src="images/Chest.webp" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#chest">
+          <div class="text">Chest Exercise</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- <div class="video">
+    <video controls autoplay muted loop src="3dman.mp4" width="700"></video>
+  </div> -->
+
+
+
+    <div class="column">
+      <img src="images/back.jpeg" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#back">
+          <div class="text">Back Exercise</div>
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <img src="images/Jogging.jpeg" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#rest">
+          <div class="text">Jogging</div>
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <img src="images/foot.jpeg" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#leg">
+          <div class="text">Foot Exercise</div>
+      </div>
+    </div>
+    <div class="column">
+      <img src="images/neck.jpeg" alt="men" style="width:70%" class="image2">
+      <div class="middle">
+        <a target="_blank" href="adobe.html#rest">
+          <div class="text">Neck Exercise</div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="container">
+
+    <h2 class="text-center mt-5">
+      <u>Covid-19 Live Data Table</u>
+    </h2>
+    <br>
+    <br>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Total Cases</th>
+          <th>Total Deaths</th>
+          <th>Total Recovered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="data">
+
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </div>
+
+
+  <div class="heart-rate">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
+      <polyline fill="none" stroke="green" stroke-width="3" stroke-miterlimit="10"
+        points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486" />
+    </svg>
+    <div class="fade-in"></div>
+    <div class="fade-out"></div>
+  </div>
+  
+  <footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-pad">
+              <h6>About us</h6>
+              <ul class="list-unstyled">
+                <li>MATRITVA</li>
+                <li>Matritva is a Sanskrit name of</li>
+                <li>mother as their is no one better</li>
+                <li><a href=""> than a mother if their is requirement</a></li>
+                <li><a href="">of health,care,or love.</a></li>
+                <li><a href=""></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-pad">
+              <h6>Services</h6>
+              <ul class="list-unstyled">
+                <li><a href="mental.html"> Mental health Predicter</a></li>
+                <li><a href="climate.html">Climate change Predicter</a></li>
+                <li><a href="cardiovascular.html">Cordiovascular Predicter</a></li>
+                <li><a href="respiratory.html">Respiratory diseases Predicter</a></li>
+                <li><a href="covid.html">Covid-19 Predicter</a></li>
+                <li><a href="cancer.html">Cancer symptoms Predicter</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-pad">
+              <h6>Health Exercises</h6>
+              <ul class="list-unstyled">
+                <li> <a href="physical.html#pre"> Preschool-Aged Children (3-5 years)</a> </li>
+                <li> <a href="physical.html#adol"> Adolescents (6-17 years)</a> </li>
+                <li> <a href="physical.html#adult">Adults (18-64 years)</a> </li>
+                <li> <a href="physical.html#old">Older Adults (65 years and older)</a> </li>
+                <li> <a href="physical.html#preg">Pregnant and Postpartum Women</a></li>
+                <li> <a href="physical.html#chro">Adults Disabilities</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h6> Follow Us </h6>
+            <ul class="social-network social-circle">
+              <li> <a href="" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"> </i> </a> </li>
+              <li> <a href="" class="icoLinkedin" title="Linkedin"> <i class="fa fa-linkedin"> </i> </a> </li>
+              <li> <a href="https://github.com/akpaswan67" class="icoGithub" title="Github"> <i class="fa fa-github"> </i> </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 copy">
+            <p class="text-center"> This website has been designed by Team Hack Elite </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script type="text/javascript">
+    (function (d, m) {
+      var kommunicateSettings =
+        { "appId": "51027dd141722a4c9ada8bf2415bbe9e", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+  </script>
+  <script>
+    document.querySelector("#show-login").addEventListener("click", function () {
+      document.querySelector(".popup").classList.add("active");
+    });
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
+      document.querySelector(".popup").classList.remove("active");
+    });
+  </script>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="JS/script.js"></script>
+<script src="JS/swiper-bundle.min.js"></script>
+<script type="text/javascript"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+  $(document).ready(function () {
+    init()
+
+    function init() {
+      let url = "https://api.covid19api.com/summary"
+
+      var data = ''
+
+      $.get(url, function (data) {
+        console.log(data.Global)
+
+        data = `
+
+               <td>${data.Global.TotalConfirmed}</td>
+               <td>${data.Global.TotalDeaths}</td>
+               <td>${data.Global.TotalRecovered}</td>
+
+                 `
+        $("#data").html(data)
+
+      })
+    }
+
+    function refreshData() {
+      clearData()
+      init()
+    }
+
+    function clearData() {
+
+      $("#data").empty()
+      init()
+
+    }
+  })
+</script>
+
+
+</html>

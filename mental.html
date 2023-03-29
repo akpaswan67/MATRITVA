@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css" />
+    <title>Mental Health</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            background-image: url("images/men2.jpg");
+            opacity: 1;
+            width: 100%;
+            background-size: 100% 100%;
+        }
+
+        .questions {
+            margin-left: 40px;
+            margin-top: 33px;
+        }
+
+        h1 {
+            margin: 40px 100px;
+            font-weight: 1000;
+            font-size: 40px;
+            color: #632626;
+        }
+
+        p {
+            margin-left: 20px;
+            text-size-adjust: 53px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        ul {
+            text-decoration: none;
+            font-size: large;
+        }
+
+        li{
+            font-weight: bold;
+        }
+
+        input {
+            margin-right: 5px;
+            font-size: large;
+        }
+
+        button {
+            margin: 40px;
+            font-family: Roboto, sans-serif;
+            font-weight: 0;
+            font-size: 14px;
+            color: #FEDEFF;
+            background-color: #00425A;
+            padding: 10px 30px;
+            border: 2px solid #FEDEFF;
+            box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+            border-radius: 50px;
+            transition: 1000ms;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            transition: 1000ms;
+            padding: 10px 50px;
+            transform: translateY(-0px);
+            background-color: #FEDEFF;
+            color: #245953;
+            border: solid 2px #245953;
+        }
+
+        .result {
+            display: none;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        #score,
+        #final {
+            font-weight: 700;
+        }
+
+        .navbar {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 64px;
+            background: #19191c;
+            color: #f9f9f9;
+            font-family: "poppins";
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 15px;
+            background-color: teal;
+            color: #fff;
+        }
+
+        .nav-links a {
+            color: #fff;
+        }
+
+        /* LOGO */
+
+        .icon {
+            width: 8%;
+        }
+
+        /* NAVBAR MENU */
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            font-size: 18px;
+        }
+
+        .menu li:hover {
+            background-color: #4c9e9e;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .menu li {
+            padding: -20px 10px;
+        }
+
+        /* DROPDOWN MENU */
+
+        .services {
+            position: relative;
+            margin-right: 100px;
+        }
+
+        .dropdown {
+            background-color: rgb(1, 139, 139);
+            padding: 1em 0;
+            position: absolute;
+            /*WITH RESPECT TO PARENT*/
+            display: none;
+            border-radius: 8px;
+            top: 35px;
+        }
+
+        .dropdown li+li {
+            margin-top: 10px;
+        }
+
+        .dropdown li {
+            padding: 0.5em 1em;
+            width: 8em;
+        }
+
+        .dropdown li:hover {
+            background-color: #4c9e9e;
+        }
+
+        .services:hover .dropdown {
+            display: block;
+        }
+
+        /*RESPONSIVE NAVBAR MENU STARTS*/
+
+        /* CHECKBOX HACK */
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        /*HAMBURGER MENU*/
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            user-select: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="image">
+            <a href="index.html#"><img src="images/icon2.png"
+                    alt="icon" class="icon"></a>
+        </div>
+
+        <ul class="nav-links">
+
+            <input type="checkbox" id="checkbox_toggle" />
+
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+
+                <li><a href="index.html#major">Home</a></li>
+
+                <li class="services">
+                    <a>About</a>
+                    <ul class="dropdown">
+                      <li><a href="physical.html">Physical Activities</a></li>
+                      <li><a href="adobe.html">Health Exercises</a></li>
+                    </ul>
+                  </li>
+
+                <li class="services">
+
+                    <a>Services</a>
+
+                    <ul class="dropdown">
+
+                        <li><a href="respiratory.html">Respiratory Diseases Predicter</a></li>
+
+                        <li><a href="cardiovascular.html">Cardiovascular Predicter</a></li>
+
+                        <li><a href="climate.html">Climate Change Pridicter</a></li>
+
+                        <li><a href="cancer.html">Cancer Predicter</a></li>
+                        <li><a href="covid.html">Covid-19 symptoms Predicter</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </div>
+
+        </ul>
+
+    </nav>
+
+    <br>
+    <br>
+
+    <h1>
+        MENTAL HEALTH TEST
+    </h1>
+    
+    <div class="questions">
+        <div>
+            <p>1. How often have you felt anxious or worried in the past month?</p>
+            <ul type="none">
+                <li><input type="radio" name="Test1">Never</li>
+                <li><input type="radio" name="Test1">Rarely</li>
+                <li><input type="radio" name="Test1" onselect="addScore()" class="ans">Sometimes</li>
+                <li><input type="radio" name="Test1" onselect="addScore()" class="ans">often</li>
+            </ul>
+        </div>
+
+
+        <div>
+            <p>2. Have you experienced any of the following symptoms in the past month?</p>
+            <ul type="none">
+                <li><input type="radio" name="Test2" onselect="addScore()" class="ans">Difficulty sleeping or oversleeping</li>
+                <li><input type="radio" name="Test2" onselect="addScore()" class="ans">Difficulty concentrating</li>
+                <li><input type="radio" name="Test2">Lack of interest or pleasure in activities</li>
+                <li><input type="radio" name="Test2">None of above</li>
+            </ul>
+        </div>
+        <div>
+            <p>3. How often have you felt sad or depressed in the past month?</p>
+            <ul type="none">
+                <li><input type="radio" name="Test3"> Never</li>
+                <li><input type="radio" name="Test3"> Rarely</li>
+                <li><input type="radio" name="Test3" onselect="addScore()" class="ans">Sometimes</li>
+                <li><input type="radio" name="Test3" onselect="addScore()" class="ans">Often</li>
+            </ul>
+        </div>
+        <div>
+            <p>4. Have you experienced any of the following symptoms in the past month? </p>
+            <ul type="none">
+                <li><input type="radio" name="Test4">Increased irritability or anger</li>
+                <li><input type="radio" name="Test4">Feeling hopeless or worthless</li>
+                <li><input type="radio" name="Test4">Thoughts of self-harm or suicide</li>
+                <li><input type="radio" name="Test4" onselect="addScore()" class="ans">None of the above</li>
+            </ul>
+        </div>
+        <div>
+            <p>5. How often have you felt stressed in the past month?</p>
+            <ul type="none">
+                <li><input type="radio" name="Test5"> Never</li>
+                <li><input type="radio" name="Test5"> Rarely</li>
+                <li><input type="radio" name="Test5" onselect="addScore()" class="ans">Sometimes</li>
+                <li><input type="radio" name="Test5" onselect="addScore()" class="ans">Often</li>
+            </ul>
+        </div>
+        <div>
+            <p>6. Have you experienced any of the following symptoms in the past month?</p>
+            <ul type="none">
+                <li><input type="radio" name="Test6">Nausea or stomach problems</li>
+                <li><input type="radio" name="Test6" onselect="addScore()" class="ans">Increased heart rate or sweating</li>
+                <li><input type="radio" name="Test6" onselect="addScore()" class="ans">Headaches or migraines</li>
+                <li><input type="radio" name="Test6">None of the above</li>
+            </ul>
+        </div>
+        <button id="btn" onclick="show()">Submit</button>
+
+        <div class="result">
+            <span id="score"></span>
+            :<span id="final"></span><br>
+            <span>For better consultation use our Hack Elite Chatbot.</span>
+        </div>
+    </div>
+
+    <script>
+        function show() {
+            let count = 0;
+            let rightAns = document.querySelectorAll(".ans");
+            for (let i = 0; i < rightAns.length; i++) {
+                if (rightAns[i].checked == true) {
+                    count++;
+                }
+            }
+            let sc = document.getElementById("score");
+            let res = document.getElementById("final");
+            let showRes = document.querySelector(".result");
+            showRes.style.display = "inline-block";
+
+            if (count == 6) {
+                sc.innerHTML = "6";
+                res.innerHTML = "Yes,consult the doctor";
+            }
+            else if (count == 5) {
+                sc.innerHTML = "5";
+                res.innerHTML = "Yes,consult the doctor";
+            }
+            else if (count == 4) {
+                sc.innerHTML = "4";
+                res.innerHTML = "Yes,consult the doctor";
+            }
+            else if (count == 3) {
+                sc.innerHTML = "3";
+                res.innerHTML = "Yes,consult the doctor";
+            }
+            else if (count == 2) {
+                sc.innerHTML = "2";
+                res.innerHTML = "No,no need to consult the doctor";
+            }
+            else if (count == 1) {
+                sc.innerHTML = "1";
+                res.innerHTML = "No,no need to consult the doctor";
+            }
+            else if (count == 0) {
+                sc.innerHTML = "0";
+                res.innerHTML = "No need to consult the doctor";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"51027dd141722a4c9ada8bf2415bbe9e","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    </script>
+</body>
+
+</html>

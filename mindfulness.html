@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness feature</title>
+    <style>
+        body {
+            background-image: url("images/mind-b.jpg");
+            opacity: 1;
+            width: 100%;
+            background-size: 100% 100%;
+        }
+
+        .questions {
+            width: 70%;
+            margin-left: 40px;
+            margin-top: 33px;
+        }
+
+        h1 {
+            margin: 40px 200px;
+            font-weight: 1000;
+            font-size: 40px;
+            color: #632626;
+        }
+
+        p {
+            margin-left: 20px;
+            text-size-adjust: 53px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        ul {
+            text-decoration: none;
+            font-size: large;
+        }
+
+        li{
+            font-weight: bold;
+        }
+
+        input {
+            margin-right: 5px;
+            font-size: large;
+
+        }
+
+        button {
+            margin: 40px;
+            font-family: Roboto, sans-serif;
+            font-weight: 0;
+            font-size: 14px;
+            color: #FEDEFF;
+            background-color: #00425A;
+            padding: 10px 30px;
+            border: 2px solid #FEDEFF;
+            box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+            border-radius: 50px;
+            transition: 1000ms;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            transition: 1000ms;
+            padding: 10px 50px;
+            transform: translateY(-0px);
+            background-color: #FEDEFF;
+            color: #245953;
+            border: solid 2px #245953;
+        }
+
+        .result {
+            display: none;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        #score,
+        #final {
+            font-weight: 700;
+        }
+
+        .navbar {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 64px;
+            background: #19191c;
+            color: #f9f9f9;
+            font-family: "poppins";
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 15px;
+            background-color: teal;
+            color: #fff;
+        }
+
+        .nav-links a {
+            color: #fff;
+        }
+
+        /* LOGO */
+
+        .icon {
+            width: 8%;
+        }
+
+        /* NAVBAR MENU */
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            font-size: 18px;
+        }
+
+        .menu li:hover {
+            background-color: #4c9e9e;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .menu li {
+            padding: -20px 10px;
+        }
+
+        /* DROPDOWN MENU */
+
+        .services {
+            position: relative;
+            margin-right: 100px;
+        }
+
+        .dropdown {
+            background-color: rgb(1, 139, 139);
+            padding: 1em 0;
+            position: absolute;
+            /*WITH RESPECT TO PARENT*/
+            display: none;
+            border-radius: 8px;
+            top: 35px;
+        }
+
+        .dropdown li+li {
+            margin-top: 10px;
+        }
+
+        .dropdown li {
+            padding: 0.5em 1em;
+            width: 8em;
+        }
+
+        .dropdown li:hover {
+            background-color: #4c9e9e;
+        }
+
+        .services:hover .dropdown {
+            display: block;
+        }
+
+        /*RESPONSIVE NAVBAR MENU STARTS*/
+
+        /* CHECKBOX HACK */
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        /*HAMBURGER MENU*/
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="image">
+            <a href="C:/Users/91936/OneDrive/Desktop/Health%20Project/index.html#"><img src="images/icon2.png"
+                    alt="icon" class="icon"></a>
+        </div>
+
+        <ul class="nav-links">
+
+            <input type="checkbox" id="checkbox_toggle" />
+
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+
+                <li><a href="C:/Users/91936/OneDrive/Desktop/Health%20Project/index.html#">Home</a></li>
+
+                <li><a href="/">About</a></li>
+
+                <li class="services">
+
+                    <a>Services</a>
+
+                    <ul class="dropdown">
+
+                        <li><a href="/">Mental Health</a>
+                        </li>
+
+
+
+
+                        <li><a href="/">Respiratory Diseases</a></li>
+
+                        <li><a href="/">Cardiovascular Malfunctioning</a></li>
+
+                        <li><a href="/">Climate Change</a></li>
+
+                        <li><a href="/">Mindfulness</a></li>
+
+                    </ul>
+
+                </li>
+
+            </div>
+
+        </ul>
+
+    </nav>
+
+    <br>
+    <br>
+	<h1>MINDFULNESS TEST</h1>
+    <div class="questions">
+    <div>
+        <p>1: How often do you feel present and fully engaged in your current activity?</p>
+        <ul type="none">
+			<li><input type="radio" name="Test1" onselect="addScore()" class="ans" value="Yes">Frequently</li>
+			<li><input type="radio" name="Test1" onselect="addScore()" class="ans" value="Yes">Sometimes</li>
+			<li><input type="radio" name="Test1" value="No">Rarely or never</li>
+		   </ul>
+    </div>
+    <div>
+        <p>2: When faced with a difficult situation, how do you typically react?</p>
+       <ul type="none">
+        <li><input type="radio" name="Test2" onselect="addScore()" class="ans" value="Yes">Feel overwhelmed and stressed</li>
+		<li><input type="radio" name="Test2" onselect="addScore()" class="ans" value="Yes">Pause and reflect before responding</li>
+        <li><input type="radio" name="Test2" value="No">None of the above</li>
+       </ul>
+    </div>
+    <div>
+        <p>3: How often do you take the time to pause and simply breathe, without any distractions or external stimuli?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test3" onselect="addScore()" class="ans">Frequently</li>
+		<li><input type="radio" name="Test3" onselect="addScore()" class="ans">Sometimes</li>
+		<li><input type="radio" name="Test3" value="No">Rarely or never</li>
+       </ul>
+    </div>
+    <div>
+        <p>4: How aware are you of your thoughts and emotions throughout the day?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test4" onselect="addScore()" class="ans" >Not very aware</li>
+		<li><input type="radio" name="Test4" onselect="addScore()" class="ans" >Somewhat aware</li>
+        <li><input type="radio" name="Test4">Highly aware</li>
+       </ul>
+    </div>
+    <div>
+        <p>5: How often do you practice self-care activities, such as meditation, exercise, or spending time in nature?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Frequently</li>
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Sometimes</li>
+        <li><input type="radio" name="Test5" >Rarely or never</li>
+       </ul>
+    </div>
+    <div>
+        <p>6: How often do you experience feelings of gratitude and appreciation for the present moment?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Frequently</li>
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Sometimes</li>
+        <li><input type="radio" name="Test5" >Rarely or never</li>
+       </ul>
+    </div>
+	<div>
+        <p>7: How often do you find yourself lost in thought, ruminating on the past or worrying about the future?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Frequently</li>
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Sometimes</li>
+        <li><input type="radio" name="Test5" >Rarely or never</li>
+       </ul>
+    </div>
+	<div>
+        <p>8: When you engage in conversation with others, how present and attentive are you?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Distracted and not fully engaged</li>
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans"> Somewhat present and attentive</li>
+        <li><input type="radio" name="Test5" > Fully present and engaged</li>
+       </ul>
+    </div>
+	<div>
+        <p>9: How often do you intentionally practice non-judgmental awareness, observing your thoughts and emotions 
+			without attaching to them or getting carried away by them?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Frequently</li>
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Sometimes</li>
+        <li><input type="radio" name="Test5" >Rarely or never</li>
+       </ul>
+    </div>
+	<div>
+        <p>10: When you encounter a setback or failure, how do you typically respond?</p>
+       <ul type="none">
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Get discouraged and give up</li>
+		<li><input type="radio" name="Test5" onselect="addScore()" class="ans">Blame others or external circumstances</li>
+        <li><input type="radio" name="Test5" >View it as a learning opportunity and move forward</li>
+       </ul>
+    </div>
+    <button id="btn" onclick="show()">Submit</button>
+
+    <div class="result">
+        <span id="score"></span>
+        : You should consult the doctor and the decision is <span id="final"></span>
+    </div>
+    </div>
+
+
+    <script>
+        function show(){
+            let count=0;
+            let rightAns=document.querySelectorAll(".ans");
+            for(let i=0;i<rightAns.length;i++)
+            {
+              if(rightAns[i].checked==true)
+              {
+              count++;
+              }
+            }
+            let sc=document.getElementById("score");
+            let res=document.getElementById("final");
+            let showRes=document.querySelector(".result");
+            showRes.style.display="inline-block";
+
+            if(count==10)
+            {   
+            sc.innerHTML="10";
+            res.innerHTML="Yes";
+            }
+			else if(count==9)
+            {
+            sc.innerHTML="9";
+            res.innerHTML="Yes";
+            }
+			else if(count==8)
+            {
+            sc.innerHTML="8";
+            res.innerHTML="Yes";
+            }
+			else if(count==7)
+            {
+            sc.innerHTML="7";
+            res.innerHTML="Yes";
+            }
+			else if(count==6)
+            {
+            sc.innerHTML="6";
+            res.innerHTML="Yes";
+            }
+            else if(count==5)
+            {
+            sc.innerHTML="5";
+            res.innerHTML="Yes";
+            }
+            else if(count==4)
+            {
+            sc.innerHTML="4";
+            res.innerHTML="Yes";
+            }
+            else if(count==3)
+            {
+            sc.innerHTML="3";
+            res.innerHTML="Not So Sever";
+            }
+            else if(count==2)
+            {
+            sc.innerHTML="2";
+            res.innerHTML="Not So Sever";
+            }
+            else if(count==1)
+            {
+            sc.innerHTML="1";
+            res.innerHTML="Not So Sever";
+            }
+            else if(count==0)
+            {
+            sc.innerHTML="0";
+            res.innerHTML="No";
+            }
+            }
+    </script>
+    <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"51027dd141722a4c9ada8bf2415bbe9e","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    </script>
+</body>
+</html>
